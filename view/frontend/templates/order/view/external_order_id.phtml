@@ -1,0 +1,19 @@
+<?php
+/**  @var \Magento\Sales\Block\Order\Info $block */
+$order = $block->getOrder();
+?>
+<?php if ($order->getData('external_order_id')) : ?>
+    <div class="block">
+        <div class="block-title">
+            <strong><?= /* @escapeNotVerified */__('Additional Information') ?></strong>
+        </div>
+        <div class="block-content">
+            <div class="box">
+                <strong class="box-title"><span><?= /* @escapeNotVerified */__('External Order Id') ?></span></strong>
+                <div class="box-content">
+                    <?= /* @escapeNotVerified */ $order->getData('external_order_id') ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

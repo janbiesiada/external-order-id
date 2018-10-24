@@ -1,0 +1,11 @@
+<?php
+/**  @var \Magento\Sales\Block\Adminhtml\Order\View\Info $block */
+
+// @codingStandardsIgnoreFile
+
+$order = $block->getOrder();
+?>
+<tr>
+    <th><?= $block->escapeHtml(__('External Order Id')) ?></th>
+    <td><?= $block->escapeHtml($order->getData('external_order_id')) ?></td>
+</tr>
