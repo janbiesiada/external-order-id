@@ -1,15 +1,8 @@
 <div>
     <form id="custom-checkout-form" class="form" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
         <fieldset class="fieldset">
-            <!-- ko foreach: getRegion('external-order-form-fields') -->
-            <!-- ko template: getTemplate() --><!-- /ko -->
-            <!--/ko-->
+            <label data-bind="i18n: 'External Order Id'"></label>
+            <input name="external_order_id" type="text" data-bind="text: title" id="external_order_id"/>
         </fieldset>
-        <button type="reset">
-            <span data-bind="i18n: 'Reset'"></span>
-        </button>
-        <button type="button" data-bind="click: onSubmit" class="action">
-            <span data-bind="i18n: 'Submit'"></span>
-        </button>
     </form>
 </div>
