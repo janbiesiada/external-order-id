@@ -19,30 +19,6 @@ class InstallSchema implements InstallSchemaInterface
     {
         $setup->startSetup();
 
-        $setup->getConnection()
-            ->addColumn(
-                $setup->getTable('sales_order'),
-                'external_order_id',
-                [
-                    'type' => Table::TYPE_TEXT,
-                    'length' => 40,
-                    'comment' =>'External Order Id',
-                    'nullable' => true
-                ]
-            );
-
-        $setup->getConnection()
-            ->addColumn(
-                $setup->getTable('quote'),
-                'external_order_id',
-                [
-                    'type' => Table::TYPE_TEXT,
-                    'length' => 40,
-                    'comment' =>'External Order Id',
-                    'nullable' => true
-                ]
-            );
-
         $setup->endSetup();
     }
 }
