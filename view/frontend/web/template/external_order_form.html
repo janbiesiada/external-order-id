@@ -2,7 +2,7 @@
     <form id="custom-checkout-form" class="form" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
         <fieldset class="fieldset">
             <label data-bind="i18n: 'External Order Id'"></label>
-            <input name="external_order_id" type="text" data-bind="text: title" id="external_order_id"/>
+            <input maxlength="40" name="external_order_id" type="text" data-bind="text: title" id="external_order_id"/>
         </fieldset>
     </form>
 </div>

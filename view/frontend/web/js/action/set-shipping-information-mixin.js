@@ -11,8 +11,10 @@ define([
             if (shippingAddress['extension_attributes'] === undefined) {
                 shippingAddress['extension_attributes'] = {};
             }
-            shippingAddress['extension_attributes']['external_order_id'] = $("input[name='external_order_id']").val();
-            return originalAction();
+            if($("input[name='external_order_id']").validate()) {
+                shippingAddress['extension_attributes']['external_order_id'] = $("input[name='external_order_id']").val();
+                return originalAction();
+            }
         });
     };
 });

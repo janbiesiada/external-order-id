@@ -3,4 +3,7 @@
     <type name="Magento\Quote\Model\QuoteRepository">
         <plugin name="quote_save" type="JBdev\ExternalOrderId\Model\QuoteRepositoryPlugin" />
     </type>
+    <type name="Magento\Sales\Model\OrderRepository">
+        <plugin name="order_save" type="JBdev\ExternalOrderId\Model\OrderRepositoryPlugin" />
+    </type>
 </config>
