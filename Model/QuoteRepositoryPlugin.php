@@ -3,14 +3,11 @@
 namespace JBdev\ExternalOrderId\Model;
 
 
-use Magento\Framework\App\ObjectManager;
 use Magento\Quote\Api\Data\AddressExtensionInterface;
 use Magento\Quote\Api\Data\AddressInterface;
 use Magento\Quote\Api\Data\CartInterface;
 use Magento\Quote\Api\Data\ShippingAssignmentInterface;
-use Magento\Quote\Model\Quote;
 use Magento\Quote\Model\QuoteRepository;
-use Magento\Sales\Model\Order;
 
 
 class QuoteRepositoryPlugin
